@@ -1,0 +1,132 @@
+:root{
+    --bg-primary: #fafafa;
+    --bg-secondary: #8f6fd0;
+    --menu-primary: #080b18;
+    --text-menu: #fff;
+    --text-primary: #000;
+    --text-secondary: #05a8be;
+    --text-terceary: #bf0efe;
+    --line-color: #DBE5E6;
+    --card-bg: #f0f0f0;
+
+    --loading: 'Italianno', cursive;
+    --ubuntu: 'Ubuntu', sans-serif;
+    --roboto: 'Roboto Mono', monospace;
+}
+
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-primary);
+    font-family: var(--ubuntu);
+    font-size: 16px;
+    color: var(--text-primary);
+}
+.loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--loading);
+    font-size: 4rem;
+    height: 97vh;
+    color: var(--text-secondary);
+    position: relative;
+    animation: upAndDown 2s ease-in-out infinite;
+}
+.container{
+    display: grid;
+    grid: 
+        "header" 
+        "main"
+        "footer";
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+.menubar{
+    grid-area: "header";
+    font-family: var(--roboto);
+    background-color: var(--menu-primary);
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.menu_btn{
+    display: flex;
+    gap: 2.5rem;
+}
+.menu_btn a{
+    text-decoration: none;
+    color: var(--text-menu);
+    font-weight: 700;
+}
+.menu_btn a:hover{
+    color: var(--text-terceary);
+}
+.menu_btn a:active{
+    color: var(--text-secondary);
+}
+main{
+    grid-area: "main";
+    display: flex;
+}
+section{
+    display: grid;
+    margin: 1rem auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    background: #ffffff46;
+}
+#home{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 10rem;
+    align-items: center;
+    justify-content: center;
+}
+.card-projects{
+    width: 22rem;
+    border: 1.5px solid var(--line-color);
+    border-radius: 2rem;
+}
+.bg-card{
+    background: var(--card-bg);
+    padding: 1rem;
+    height: 15rem;
+    border-radius: 2rem 2rem 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bg-card img{
+    width: 300px;
+}
+.text-card{
+    height: 15rem;
+    border-radius: 0 0  2rem 2rem;
+    background: var(--text-menu);
+}
+footer{
+    display: flex;
+    padding: 1rem 2rem;
+    align-items: center;
+    justify-content: center;
+}
+footer span, footer span a{
+    text-decoration: none;
+}
+footer span a{
+    color: var(--text-secondary);
+}
+footer span a:hover{
+    color: var(--text-terceary);
+}
